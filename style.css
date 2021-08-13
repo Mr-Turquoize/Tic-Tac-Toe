@@ -1,0 +1,238 @@
+
+:root{
+    --bg : #34495e;
+    --hoverbg : #2c3e50;
+    --O : #27ae60;
+    --X : #e67e22;
+    --blue: #3498db;
+    --text: #bdc3c7;  
+    --boardbg : #95a5a6;
+    --extra : #9b59b6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--bg);
+    color: blanchedalmond;
+    overflow-x : hidden;
+}
+
+
+
+.header{
+    font-size: 3em;
+    text-align: center;
+}
+
+
+.players{
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.player{
+    background-color: var(--bg);
+    font-size:1em;
+    border:2px solid var(--blue);
+    padding:1em 2em;
+    margin:2em;
+    font-weight: bold;
+}
+
+
+.X{
+    color:var(--X);
+}
+
+.O{
+    color:var(--O);
+}
+
+
+.modeSelect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5em;
+    padding:1em;
+    text-align: center;
+}
+
+.modes{
+    overflow-x : hidden;
+    margin:0 auto;
+    width:25em;
+    padding:1em;
+}
+
+.mode{
+    font-family: Verdana;
+    margin: 1em;
+    padding:1em;
+    background-color: var(--O);
+    cursor: pointer;
+}
+
+.modeTitle{
+    font-size: 2.1em;
+    color:var(--X);
+}
+
+.grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap:2em;
+    margin:0 auto;
+    height:37em;
+    width:37em;
+    margin-bottom:15em;
+}
+
+.grid-element{
+    outline: none;
+    padding:1.5em;
+    background-color: var(--bg);
+    border-radius: 15px;
+    border:2px solid var(--text);
+}
+
+.grid-element:hover, .player:hover{
+    cursor: pointer;
+    background-color: var(--hoverbg);
+
+}
+
+.marked{
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.footer {
+    position: absolute;
+    top:19%;
+    display: none;
+    font-size:3em;
+    width:25em;
+    height:25em;
+    text-align: center;
+    border:2px solid red;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: var(--hoverbg);
+}
+
+.footer-show{
+    display: block;
+    animation: fadeInFromNone 1s ease-in-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+.Human{
+    animation: slide-in 1s forwards;
+}
+
+.AI{
+    animation: slide-out 1s forwards;
+}
+
+@keyframes slide-in {
+    0% {transform: translateX(-300%);}
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% {transform: translateX(300%);}
+    100% { transform: translateX(0%); }
+}
+
+
+@keyframes move-out {
+    100% { transform: translateX(300%); }
+}
+
+@keyframes move-other {
+    100% {
+        font-size: 0.8em;
+    }
+}
+
+.move-other{
+    animation: move-other 0.5s forwards;
+}
+
+.move-mode{
+    animation: move-out 1s forwards;
+}
+
+.lol{
+    display: block;
+    margin: 0 auto;
+    padding:2em;
+}
+
+
+.restart{
+    text-decoration: none;
+    border-radius: 15px;
+    padding:0.7em;
+    color:rgb(37, 36, 36);
+    background-color: crimson;
+}
+
+.restart:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.winner{
+    margin-top:2em;
+}
+
+@media (max-width:650px){
+    .footer{
+        font-size:2.5rem;
+    }
+}
+
+@media (max-width:500px){
+    .footer{
+        font-size:2rem;
+    }
+    .lol{
+        width:90%;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size:0.4rem;
+    }
+}
+

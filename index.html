@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content='IT=Edge'>
+    <meta name='viewport' content='width=device-width, intial-scale = 1.0'>
+    <title>Tic-Tac-Toe</title>
+    <!-- Css stylesheet integration -->
+    <link rel='stylesheet' href='style.css'>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+            <h1>Tic - Tac - Toe</h1>
+    </header>
+
+    <section class="modeSelect">
+        <h2 class="modeTitle">Select Mode</h2>
+        <div class="modes">
+            <h3 class="mode Human">Human VS Human</h3>
+            <h3 class="mode AI">Human VS AI</h3>
+        </div>
+    </section>
+
+    <section class="players">
+        <input type="button" name="choose" value="X" class="player X"><label for="X" checked></label>
+        <input type="button" name="choose" value="O" class="player O"><label for="O"></label>
+    </section>
+
+    <section class="grid">
+        <div id="a" class="grid-element"></div>
+        <div id="b" class="grid-element"></div>
+        <div id="c" class="grid-element"></div>
+        <div id="d" class="grid-element"></div>
+        <div id="e" class="grid-element"></div>
+        <div id="f" class="grid-element"></div>
+        <div id="g" class="grid-element"></div>
+        <div id="h" class="grid-element"></div>
+        <div id="i" class="grid-element"></div>
+    </section>
+
+    <footer class="footer">
+        <h3 class="winner"></h3>
+        <img src = 'https://sweetmiles.com/wp-content/uploads/2013/07/funny-mr-bean-gif.gif' alt="funny-img" class="lol">
+        <a href ='index.html' class="restart">Play Again</a>
+    </footer>
+
+</body>
+
